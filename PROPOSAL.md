@@ -8,24 +8,38 @@ I am an Indian classical music student who has used a wide variety of tanpura ap
 
 3. A rough timeline of what will get accomplished and when (e.g, "By the end of Week 2, I will have implemented XYZ and will start working on ABC")
 
-Week 1: Find tanpura samples that are available for public use on the internet. Clean up the samples and get the sample files to loop properly. Get familiar with Cinder's Audio API and start to work on getting the sounds to play at certain intervals.
+### Week 1: 
+- [X] Find tanpura samples that are available for public use on the internet. 
+- [X] Clean up the samples and get the sample files to loop properly. 
+- [X] Get familiar with Cinder's Audio API 
+- [ ] Start trying to get sounds to play at certain intervals/loop
 
-Week 2: Code: get the tanpura loop to function properly. If possible, work on increasing and decreasing tanpura speed.
+### Week 2: 
+**Code:** 
+- [ ] get the tanpura loop to function properly. 
+- [ ] increasing and decreasing tanpura speed.
 
-Visualizer: Play and pause the tanpura from the visualizer.
+**Visualizer:**
+- [ ] Play and pause the tanpura from the visualizer.
 
-Week 3: Code: Finalize increase and decrease tanpura speed. Look into changing pitch and/or changing the notes that play in the tanpura and implement that.
+### Week 3: 
+**Code:**
+- [ ] Finalize increase and decrease tanpura speed
+- [ ] Look into changing pitch and/or 
+- [ ] Changing the notes that play in the tanpura and implement that (saPaPasa vs saMaMaSa)
 
-Visualizer: Add slider or +/- button to change tanpura speed. Add buttons for changing what notes play in the tanpura or what pitch it is. 
+**Visualizer:** 
+- [ ] Add slider or +/- button to change tanpura speed
+- [ ] Add buttons for changing what notes play in the tanpura or what pitch it is. 
 
 4. If you were to finish the project early, what extra "stretch goals" could you implement?
 
 Stretch Goals:
 In no particular order--
-- Allow users to edit the second string pitch
-- Vary pluck speed
-- Support two tanpuras playing simultaneously
-- support 6 beat pluck mode
-- support dual octave tanpuras
-- allow users to change tuning from the 440hz standard
-- presets for different raags.
+- [ ] Allow users to edit the second string pitch
+- [ ] Vary pluck speed
+- [ ] Support two tanpuras playing simultaneously
+- [ ] support 6 beat pluck mode
+- [ ] support dual octave tanpuras
+- [ ] allow users to change tuning from the 440hz standard
+- [ ] presets for different raags.
