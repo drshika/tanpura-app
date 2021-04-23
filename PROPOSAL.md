@@ -12,7 +12,7 @@ I am an Indian classical music student who has used a wide variety of tanpura ap
 - [X] Find tanpura samples that are available for public use on the internet. 
 - [X] Clean up the samples and get the sample files to loop properly. 
 - [X] Get familiar with Cinder's Audio API 
-- [ ] Start trying to get sounds to play at certain intervals/loop
+- [X] Start trying to get sounds to play at certain intervals/loop
 
 ### Week 2: 
 **Code:** 
