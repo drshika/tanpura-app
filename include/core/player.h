@@ -8,8 +8,6 @@
 #include "cinder/audio/Source.h"
 
 namespace tanpura {
-    //using ci::audio;
-    namespace audio {
         class Player {
         public:
             /**
@@ -32,5 +30,4 @@ namespace tanpura {
         private:
             
         };
-    }
 }

@@ -2,17 +2,16 @@
 #include <cinder/app/App.h>
 
 namespace tanpura {
-    using cinder::audio::Voice;
-    audio::Player::Player() {
+    Player::Player() {
         cinder::audio::SourceFileRef sourceFile = ci::audio::load(ci::app::loadAsset("../assets/tanpura_C.mp3"));
-        mVoice = Voice::create( sourceFile );
+        mVoice = cinder::audio::Voice::create( sourceFile );
     }
 
-    void audio::Player::Play() {
+    void Player::Play() {
         mVoice->start();
     }
 
-    void audio::Player::Pause() {
+    void Player::Pause() {
         mVoice->pause();
     }
 
