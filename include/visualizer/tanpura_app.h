@@ -24,17 +24,21 @@ namespace tanpura {
          */
         void draw() override;
     private:
+        //Window and Element positioning
         const int kWindowSize = 875;
         const int kTopPadding = 50;
         const double kTextHeight = 75;
         const glm::vec2 kImagePosition = {-80, 180};
-
+        
+        //Colors
         const ci::Color kBackgroundColor = ci::Color::hex(0xEDE1D1);
         const ci::Color kTextColor = ci::Color::hex(0x2f2d29);
-
+        
+        //Fonts
         const std::string kMainFontName = "Georgia";
         const std::string kTitleText = "Tanpura App";
-
+        
+        std::string pitch_name;
         cinder::gl::Texture2dRef mImage;
     };
 }
