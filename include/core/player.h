@@ -1,13 +1,16 @@
 #pragma once
 
+#include "cinder/audio/audio.h"
+#include "cinder/audio/Source.h"
+#import "tanpura_string.h"
+
 #include <map>
 #include <string>
 #include <vector>
 
-#include "cinder/audio/audio.h"
-#include "cinder/audio/Source.h"
-
 namespace tanpura {
+    //Stores the device master output
+    auto ctx;
         class Player {
         public:
             /**
@@ -23,19 +26,16 @@ namespace tanpura {
             /**
              * Starts tanpura playback
              */
-            void Play();
+            void Play(const TanpuraString& string);
             /**
              * Pauses tanpura playback
              */
-            void Pause();
+            void Pause(const TanpuraString& string);
         private:
-            struct TanpuraVoice {
-                ci::audio::GainNodeRef gain_;
-                ci::audio::BufferPlayerNodeRef buffer_player_;
-                bool is_playing_;
-            };
-            
             //map of file paths to pitches
-            std::map<std::string, std::string> pitches;
+            map<string,TanpuraString::Pitch> pitch_files_;
+            
+            //map of TanpuraStrings
+            map<string, TanpuraString> pitches_;
         };
 }
