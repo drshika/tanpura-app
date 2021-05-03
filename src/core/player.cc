@@ -4,8 +4,8 @@
 #include "cinder/audio/audio.h"
 
 using namespace ci;
-using namespace ci::app;
 using namespace std;
+using namespace ci::app;
 
 namespace tanpura {
     Player::Player() = default;
@@ -29,16 +29,9 @@ namespace tanpura {
         };
         
         for (const auto& x: pitch_files_) {
-            audio::SourceFileRef sourceFile = audio::load(app::loadAsset(x.first));
-            TanpuraString str = TanpuraString(sourceFile, x.second);
+            TanpuraString str = TanpuraString(x.first, x.second);
             
-            int pitch_len = x.first.substr(8).length();
-            string pitch_name = x.first.substr(8, 1);
-            
-            if (pitch_len == 8) {
-                pitch_name += "#";
-            } 
-            pitches_.insert(std::pair<string, TanpuraString>("C", str));
+            pitches_.insert(std::pair<TanpuraString::Pitch, TanpuraString>(x.first, str));
         }
         //enable context
         ctx->enable();
@@ -46,12 +39,23 @@ namespace tanpura {
 
     void Player::Play(const TanpuraString& string) {
         string.GetGain()->getParam()->setValue(1.0f); // Turn gain/volume up all the way
+        string.GetMBufferPlayer()->setLoopEnabled(true);
         string.GetMBufferPlayer()->start();
     }
 
     void Player::Pause(const TanpuraString& string) {
-        string.GetGain()->getParam()->setValue(0.0f); // Turn gain/volume up all the way
+        string.GetGain()->getParam()->setValue(0.0f); // Turn gain/volume down all the way
+        string.GetMBufferPlayer()->setLoopEnabled(false);
         string.GetMBufferPlayer()->stop();
     }
 
+    void Player::IncrementVolume(const TanpuraString& string, double degree) {
+        if (abs(degree) >= 1 && degree >= 0) {
+            string.GetGain()->getParam()->setValue(1.0f);
+        } else if (abs(degree) >= 1 && degree <= 0) {
+            string.GetGain()->getParam()->setValue(0.0f);
+        } else {
+            string.GetGain()->getParam()->setValue(0.0 + degree);
+        }
+    }
 }

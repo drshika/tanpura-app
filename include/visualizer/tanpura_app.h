@@ -1,5 +1,6 @@
 #pragma once
 
+#import <core/player.h>
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
@@ -38,7 +39,12 @@ namespace tanpura {
         const std::string kMainFontName = "Georgia";
         const std::string kTitleText = "Tanpura App";
         
+        const double kIncrementVolume = 0.05;
+        
         std::string pitch_name;
         cinder::gl::Texture2dRef mImage;
+        
+        Player player_;
+        TanpuraString current_string_;
     };
 }

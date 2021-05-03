@@ -27,15 +27,23 @@ namespace tanpura {
              * Starts tanpura playback
              */
             void Play(const TanpuraString& string);
+            
             /**
              * Pauses tanpura playback
              */
             void Pause(const TanpuraString& string);
+            
+            /**
+             * 
+             * @param string 
+             * @param degree 
+             */
+            void IncrementVolume(const TanpuraString& string, double degree);
         private:
             //map of file paths to pitches
             map<string,TanpuraString::Pitch> pitch_files_;
             
             //map of TanpuraStrings
-            map<string, TanpuraString> pitches_;
+            map<TanpuraString::Pitch, TanpuraString> pitches_;
         };
 }

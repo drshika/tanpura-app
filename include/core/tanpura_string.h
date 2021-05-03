@@ -31,17 +31,31 @@ namespace tanpura {
          * @param pitch pitch that the sound file is
          * @param source_file_ the source file to create a buffer from
          */
-        TanpuraString(const audio::SourceFileRef& source_file, Pitch pitch);
+        TanpuraString(string source_file_path, Pitch pitch);
+        
+        /**
+         * Getter for mBufferPlayer
+         * @return mBufferPlayer
+         */
+        const audio::BufferPlayerNodeRef &GetMBufferPlayer() const;
+        
+        /**
+         * Getter for Gain Node
+         * @return gain_
+         */
+        const audio::GainNodeRef &GetGain() const;
+
+        /**
+         * Getter for Pitch Name
+         * @return gain_
+         */
+        const string &getPitchName() const;
 
     private:
         Pitch pitch_;
+        string pitch_name_;
 
         audio::BufferPlayerNodeRef mBufferPlayer_;
         audio::SourceFileRef source_file_;
         audio::GainNodeRef gain_;
-    public:
-        const audio::BufferPlayerNodeRef &GetMBufferPlayer() const;
-
-        const audio::GainNodeRef &GetGain() const;
-    };
 }
