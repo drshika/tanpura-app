@@ -31,7 +31,7 @@ namespace tanpura {
         for (const auto& x: pitch_files_) {
             TanpuraString str = TanpuraString(x.first, x.second);
             
-            pitches_.insert(std::pair<TanpuraString::Pitch, TanpuraString>(x.first, str));
+            pitches_.insert(std::pair<TanpuraString::Pitch, TanpuraString>(x.second, str));
         }
         //enable context    
         ctx->enable();
@@ -59,7 +59,7 @@ namespace tanpura {
         }
     }
 
-    const map<TanpuraString::Pitch, TanpuraString> &Player::GetPitches() const {
+    map<TanpuraString::Pitch, TanpuraString> Player::GetPitches() {
         return pitches_;
     }
 }

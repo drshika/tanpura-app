@@ -1,6 +1,6 @@
 #pragma once
 
-#import <core/player.h>
+#include "core/player.h"
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
@@ -8,6 +8,8 @@
 
 #include "cinder/audio/Voice.h"
 #include "cinder/audio/Source.h"
+#include "../core/tanpura_string.h"
+#include "../core/player.h"
 
 namespace tanpura {
     
@@ -24,6 +26,8 @@ namespace tanpura {
          * Draws all the components of the app on a window on the computer screen
          */
         void draw() override;
+
+        void keyDown(KeyEvent event) override;
     private:
         //Window and Element positioning
         const int kWindowSize = 875;

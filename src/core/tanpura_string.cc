@@ -13,8 +13,8 @@ namespace tanpura {
         audio::SourceFileRef sourceFile = audio::load(app::loadAsset(source_file_path));
         pitch_ = pitch;
 
-        int pitch_len = source_file_path.first.substr(8).length();
-        pitch_name_ = source_file_path.first.substr(8, 1);
+        int pitch_len = source_file_path.substr(8).length();
+        pitch_name_ = source_file_path.substr(8, 1);
 
         if (pitch_len == 8) {
             pitch_name_ += "#";
@@ -22,7 +22,7 @@ namespace tanpura {
         
         //create BufferPlayerNode from file
         mBufferPlayer_ = ctx->makeNode(new audio::BufferPlayerNode());
-        mBufferPlayer_->loadBuffer(source_file_path);
+        mBufferPlayer_->loadBuffer(sourceFile);
 
         //create GainNode for volume control, set to max volume
         gain_ = ctx->makeNode(new audio::GainNode(1.0f));
@@ -49,5 +49,11 @@ namespace tanpura {
 
     void TanpuraString::setIsPlaying(bool isPlaying) {
         is_playing_ = isPlaying;
+    }
+
+    TanpuraString::TanpuraString() {
+        pitch_ = Pitch::C;
+        pitch_name_ = "C";
+        is_playing_ = false;
     }
 }

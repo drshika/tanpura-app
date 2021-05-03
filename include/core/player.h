@@ -2,7 +2,7 @@
 
 #include "cinder/audio/audio.h"
 #include "cinder/audio/Source.h"
-#import "tanpura_string.h"
+#include "tanpura_string.h"
 
 #include <map>
 #include <string>
@@ -10,7 +10,8 @@
 
 namespace tanpura {
     //Stores the device master output
-    auto ctx;
+    static audio::Context* ctx;
+    
         class Player {
         public:
             /**
@@ -39,13 +40,17 @@ namespace tanpura {
              * @param degree 
              */
             void IncrementVolume(const TanpuraString& string, double degree);
+            
+            /**
+             * Getter for pitches
+             * @return pitches_
+             */
+            map <TanpuraString::Pitch, TanpuraString> GetPitches();
         private:
             //map of file paths to pitches
             map<string,TanpuraString::Pitch> pitch_files_;
             
             //map of TanpuraStrings
             map<TanpuraString::Pitch, TanpuraString> pitches_;
-        public:
-            const map <Pitch, TanpuraString> &GetPitches() const;
         };
 }

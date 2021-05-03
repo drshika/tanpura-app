@@ -3,9 +3,14 @@
 #include <map>
 #include <string>
 #include <vector>
+#include "cinder/app/App.h"
 
 #include "cinder/audio/audio.h"
 #include "cinder/audio/Source.h"
+
+using namespace ci;
+using namespace std;
+using namespace ci::app;
 
 namespace tanpura {
     class TanpuraString {
@@ -25,7 +30,9 @@ namespace tanpura {
             G,
             Gs,
         };
-
+        
+        TanpuraString();
+        
         /**
          * Constructor for a Tanpura String Object
          * @param pitch pitch that the sound file is
@@ -64,5 +71,5 @@ namespace tanpura {
         audio::GainNodeRef gain_;   
 
         bool is_playing_;
-    }
+    };
 }
