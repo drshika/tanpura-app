@@ -1,7 +1,5 @@
 #include <iostream>
-#include "core/player.h"
 #include "visualizer/tanpura_app.h"
-#include "cinder/audio/audio.h"
 
 using namespace ci;
 using namespace ci::app;
