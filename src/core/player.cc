@@ -33,7 +33,7 @@ namespace tanpura {
             
             pitches_.insert(std::pair<TanpuraString::Pitch, TanpuraString>(x.first, str));
         }
-        //enable context
+        //enable context    
         ctx->enable();
     }
 
@@ -57,5 +57,9 @@ namespace tanpura {
         } else {
             string.GetGain()->getParam()->setValue(0.0 + degree);
         }
+    }
+
+    const map<TanpuraString::Pitch, TanpuraString> &Player::GetPitches() const {
+        return pitches_;
     }
 }

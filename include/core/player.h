@@ -45,5 +45,7 @@ namespace tanpura {
             
             //map of TanpuraStrings
             map<TanpuraString::Pitch, TanpuraString> pitches_;
+        public:
+            const map <Pitch, TanpuraString> &GetPitches() const;
         };
 }

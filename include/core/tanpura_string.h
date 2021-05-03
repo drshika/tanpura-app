@@ -25,20 +25,20 @@ namespace tanpura {
             G,
             Gs,
         };
-        
+
         /**
          * Constructor for a Tanpura String Object
          * @param pitch pitch that the sound file is
          * @param source_file_ the source file to create a buffer from
          */
         TanpuraString(string source_file_path, Pitch pitch);
-        
+
         /**
          * Getter for mBufferPlayer
          * @return mBufferPlayer
          */
         const audio::BufferPlayerNodeRef &GetMBufferPlayer() const;
-        
+
         /**
          * Getter for Gain Node
          * @return gain_
@@ -50,6 +50,10 @@ namespace tanpura {
          * @return gain_
          */
         const string &getPitchName() const;
+        
+        bool GetIsPlaying() const;
+
+        void setIsPlaying(bool isPlaying);
 
     private:
         Pitch pitch_;
@@ -57,5 +61,8 @@ namespace tanpura {
 
         audio::BufferPlayerNodeRef mBufferPlayer_;
         audio::SourceFileRef source_file_;
-        audio::GainNodeRef gain_;
+        audio::GainNodeRef gain_;   
+
+        bool is_playing_;
+    }
 }

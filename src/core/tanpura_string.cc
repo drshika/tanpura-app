@@ -19,7 +19,7 @@ namespace tanpura {
         if (pitch_len == 8) {
             pitch_name_ += "#";
         }
-
+        
         //create BufferPlayerNode from file
         mBufferPlayer_ = ctx->makeNode(new audio::BufferPlayerNode());
         mBufferPlayer_->loadBuffer(source_file_path);
@@ -41,5 +41,13 @@ namespace tanpura {
 
     const string &TanpuraString::getPitchName() const {
         return pitch_name_;
+    }
+
+    bool TanpuraString::GetIsPlaying() const {
+        return is_playing_;
+    }
+
+    void TanpuraString::setIsPlaying(bool isPlaying) {
+        is_playing_ = isPlaying;
     }
 }
