@@ -33,7 +33,7 @@ namespace tanpura {
 
         // Draw Pitch Name
         glm::dvec2 pitch_text_center(kWindowSize * 2 / 3, kWindowSize / 2);
-        pitch_name = "C"; //TODO: Change to variable later
+        pitch_name = current_string_.getPitchName();
         ci::gl::drawStringCentered(
                 pitch_name, pitch_text_center, kTextColor,
                 ci::Font(kMainFontName, kTextHeight));
