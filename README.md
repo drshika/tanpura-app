@@ -11,7 +11,7 @@ Happy Practicing!
 This project is currently stable for MacOS. Other platforms have yet to be tested. This installation requires the [CLion IDE](https://www.jetbrains.com/clion/)
 
 ### Setting up Cinder
-This project requires the Cinder framework. First, we need to set up Cinder. These instructions are modified from [UIUC Fall 2020 NaiveBayes](https://courses.grainger.illinois.edu/cs126/fa2020/assignments/naive-bayes/)
+This project requires the Cinder framework. First, we need to set up Cinder. These instructions are modified from [UIUC Spring 2021 Ideal Gas](https://courses.grainger.illinois.edu/cs126/sp2021/assignments/ideal-gas/)
 * Download [Cinder](https://libcinder.org/download) (v0.9.2) for you platform
 * Extract the downloaded item into a folder. We will call this folder `~/Cinder`
 * Follow the [Instructions](https://www.libcinder.org/docs/guides/cmake/cmake.html#building-libcinder-with-cmake) for building LibCinder with CMake
