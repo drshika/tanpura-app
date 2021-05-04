@@ -25,19 +25,35 @@ namespace tanpura {
         ci::gl::clear(background_color);
 
         // Draw Title Text
-        glm::dvec2 title_text_center(kWindowSize / 2, kTopPadding);
         ci::gl::drawStringCentered(
-                kTitleText, title_text_center, kTextColor,
-                ci::Font(kMainFontName, kTextHeight));
+                kTitleText, kTitleTextPosition, kTextColor,
+                ci::Font(kTitleFontName, kTitleTextHeight));
         cinder::gl::draw(mImage, kImagePosition);
 
         // Draw Pitch Name
-        glm::dvec2 pitch_text_center(kWindowSize * 2 / 3, kWindowSize / 2);
         pitch_name = current_string_.getPitchName();
+        ci::gl::color(kBoxColor);
+        ci::gl::drawSolidRect(kPitchBox);
+        ci::gl::color(kBoxOutlineColor);
+        ci::gl::drawStrokedRect(kPitchBox, 5.00);
         ci::gl::drawStringCentered(
-                pitch_name, pitch_text_center, kTextColor,
-                ci::Font(kMainFontName, kTextHeight));
-        }
+                pitch_name, kPitchTextPosition, kTextColor,
+                ci::Font(kTitleFontName, kTitleTextHeight));
+        
+        //Draw Tooltip
+        glm::dvec2 tooltip_text_center(577, 500);
+        ci::gl::drawStringCentered(kToolTipTitle, tooltip_text_center, kTextColor, 
+                                ci::Font(kTitleFontName, kTTTextHeight));
+        glm::dvec2 tooltip_text_body(577, 570);
+        ci::gl::drawStringCentered(kToolTipPtOne, tooltip_text_body, kTextColor,
+                                   ci::Font(kToolTipFontName, kTextHeight));
+        glm::dvec2 tooltip_text_body2(577, 600);
+        ci::gl::drawStringCentered(kToolTipPtTwo, tooltip_text_body2, kTextColor,
+                                   ci::Font(kToolTipFontName, kTextHeight));
+        glm::dvec2 tooltip_text_body3(577, 630);
+        ci::gl::drawStringCentered(kToolTipPtThree, tooltip_text_body3, kTextColor,
+                                   ci::Font(kToolTipFontName, kTextHeight));
+    }
 
     void TanpuraApp::keyDown(ci::app::KeyEvent event) {
         //Handles Play and Pause
