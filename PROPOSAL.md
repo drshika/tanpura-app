@@ -16,11 +16,10 @@ I am an Indian classical music student who has used a wide variety of tanpura ap
 
 ### Week 2: 
 **Code:** 
-- [ ] get the tanpura loop to function properly. 
-- [ ] increasing and decreasing tanpura speed.
+- [x] get the tanpura loop to function properly. 
 
 **Visualizer:**
-- [ ] Play and pause the tanpura from the visualizer.
+- [x] Play and pause the tanpura from the visualizer.
 
 ### Week 3: 
 **Code:**
@@ -28,7 +27,6 @@ I am an Indian classical music student who has used a wide variety of tanpura ap
 - [ ] Changing the notes that play in the tanpura and implement that (saPaPasa vs saMaMaSa) (not implementing this b/c would need more sound files)
 
 **Visualizer:** 
-- [ ] Add slider or +/- button to change tanpura speed
 - [ ] Add buttons for changing what notes play in the tanpura or what pitch it is. 
 
 4. If you were to finish the project early, what extra "stretch goals" could you implement?
