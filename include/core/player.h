@@ -27,12 +27,12 @@ namespace tanpura {
             /**
              * Starts tanpura playback
              */
-            void Play(const TanpuraString& string);
+            void Play(TanpuraString string);
             
             /**
              * Pauses tanpura playback
              */
-            void Pause(const TanpuraString& string);
+            void Pause(TanpuraString string);
             
             /**
              * 

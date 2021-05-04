@@ -60,7 +60,7 @@ namespace tanpura {
         
         bool GetIsPlaying() const;
 
-        void setIsPlaying(bool isPlaying);
+        void SetIsPlaying(bool isPlaying);
 
     private:
         Pitch pitch_;

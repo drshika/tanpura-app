@@ -48,7 +48,7 @@ namespace tanpura {
         return is_playing_;
     }
 
-    void TanpuraString::setIsPlaying(bool isPlaying) {
+    void TanpuraString::SetIsPlaying(bool isPlaying) {
         is_playing_ = isPlaying;
     }
 

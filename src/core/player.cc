@@ -37,17 +37,17 @@ namespace tanpura {
         ctx->enable();
     }
 
-    void Player::Play(const TanpuraString& string) {
+    void Player::Play(TanpuraString string) {
         string.GetGain()->getParam()->setValue(1.0f); // Turn gain/volume up all the way
         string.GetMBufferPlayer()->setLoopEnabled(true);
         string.GetMBufferPlayer()->start();
     }
 
-    void Player::Pause(const TanpuraString& string) {
-        string.GetGain()->getParam()->setValue(0.0f); // Turn gain/volume down all the way
-        string.GetMBufferPlayer()->setLoopEnabled(false);
+    void Player::Pause(TanpuraString string) {
         string.GetMBufferPlayer()->stop();
-    }
+        string.GetMBufferPlayer()->setLoopEnabled(false);
+        string.GetGain()->getParam()->setValue(0.0f); // Turn gain/volume down all the way
+    }  
 
     void Player::IncrementVolume(const TanpuraString& string, double degree) {
         double current_val = string.GetGain()->getParam()->getValue();

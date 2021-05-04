@@ -42,10 +42,12 @@ namespace tanpura {
     void TanpuraApp::keyDown(ci::app::KeyEvent event) {
         //Handles Play and Pause
         if (event.getCode() == ci::app::KeyEvent::KEY_SPACE) {
-            if (current_string_.GetIsPlaying()) {
-                player_.Pause(current_string_);
-            } else {
+            if (!(current_string_.GetIsPlaying())) {
+                current_string_.SetIsPlaying(true);
                 player_.Play(current_string_);
+            } else {
+                current_string_.SetIsPlaying(false);
+                player_.Pause(current_string_);
             }
         }
 
