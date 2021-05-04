@@ -1,7 +1,7 @@
 # Tanpura-App
 ![Screenshot of _Tanpura_ app](app_screenshot.png)
 # Description
-Tanpura is a string instrument that is plucked to help Indian Classical Musicians practice. Tanpura-App is my attempt to emulate that experience using Cinder and C++.
+Tanpura is a string instrument that is plucked to help Indian classical musicians practice. Tanpura-App is my attempt to emulate that experience using Cinder and C++.
 
 With this app, you can practice with tanpura in every key in the major scale. Additionally, you can also adjust the volume of the Tanpura. 
 
