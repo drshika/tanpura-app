@@ -50,12 +50,13 @@ namespace tanpura {
     }
 
     void Player::IncrementVolume(const TanpuraString& string, double degree) {
+        double current_val = string.GetGain()->getParam()->getValue();
         if (abs(degree) >= 1 && degree >= 0) {
             string.GetGain()->getParam()->setValue(1.0f);
         } else if (abs(degree) >= 1 && degree <= 0) {
             string.GetGain()->getParam()->setValue(0.0f);
         } else {
-            string.GetGain()->getParam()->setValue(0.0 + degree);
+            string.GetGain()->getParam()->setValue(current_val + degree);
         }
     }
 
