@@ -9,7 +9,7 @@ using namespace ci::app;
 namespace tanpura {
 
     TanpuraApp::TanpuraApp() {
-        ci::app::setWindowSize((int) kWindowSize, (int) kWindowSize);
+        ci::app::setWindowSize((int) kWindowWidth, (int) kWindowHeight);
         player_ = Player();
         player_.SetUpVoices();
         current_string_ = player_.GetPitches()[TanpuraString::Pitch::C];
@@ -41,17 +41,13 @@ namespace tanpura {
                 ci::Font(kTitleFontName, kTitleTextHeight));
         
         //Draw Tooltip
-        glm::dvec2 tooltip_text_center(577, 500);
-        ci::gl::drawStringCentered(kToolTipTitle, tooltip_text_center, kTextColor, 
-                                ci::Font(kTitleFontName, kTTTextHeight));
-        glm::dvec2 tooltip_text_body(577, 570);
-        ci::gl::drawStringCentered(kToolTipPtOne, tooltip_text_body, kTextColor,
+        ci::gl::drawStringCentered(kToolTipTitle, kToolTipTitleCenter, kTextColor,
+                                   ci::Font(kTitleFontName, kTTTextHeight));
+        ci::gl::drawStringCentered(kToolTipPtOne, kToolTipTextCenter, kTextColor,
                                    ci::Font(kToolTipFontName, kTextHeight));
-        glm::dvec2 tooltip_text_body2(577, 600);
-        ci::gl::drawStringCentered(kToolTipPtTwo, tooltip_text_body2, kTextColor,
+        ci::gl::drawStringCentered(kToolTipPtTwo, toolTipTextBody2, kTextColor,
                                    ci::Font(kToolTipFontName, kTextHeight));
-        glm::dvec2 tooltip_text_body3(577, 630);
-        ci::gl::drawStringCentered(kToolTipPtThree, tooltip_text_body3, kTextColor,
+        ci::gl::drawStringCentered(kToolTipPtThree, toolTipTextBody3, kTextColor,
                                    ci::Font(kToolTipFontName, kTextHeight));
     }
 

@@ -30,12 +30,17 @@ namespace tanpura {
         void keyDown(KeyEvent event) override;
     private:
         //Window and Element positioning
-        const int kWindowSize = 875;
+        const int kWindowWidth = 875;
+        const int kWindowHeight = 700;
         const int kTopPadding = 50;
         const glm::vec2 kImagePosition = {-80, 180};
-        const glm::vec2 kTitleTextPosition = {kWindowSize / 2, kTopPadding};
-        const glm::vec2 kPitchTextPosition = {kWindowSize * 2 / 3, kWindowSize * 1 / 3};
+        const glm::vec2 kTitleTextPosition = {kWindowWidth / 2, kTopPadding};
+        const glm::vec2 kPitchTextPosition = {kWindowWidth * 2 / 3, kWindowWidth * 1 / 3};
         const Rectf kPitchBox = Rectf(523, 252, 646, 375);
+        const glm::dvec2 kToolTipTitleCenter = {577, 500};
+        const glm::dvec2 kToolTipTextCenter= {577, 570};
+        const glm::dvec2 toolTipTextBody2= {577, 600};
+        const glm::dvec2 toolTipTextBody3= {577, 630};
         
         //Colors
         const ci::Color kBackgroundColor = ci::Color::hex(0xEDE1D1);
