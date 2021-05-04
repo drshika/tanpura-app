@@ -33,3 +33,5 @@ The core controls are displayed in a helpful key when your run the _Tanpura_ app
 # Credits
 ## Sound Files
 - [Anubodh](https://www.anubodh.com/tanpura.php)
+## Images
+- [Vexels](https://www.vexels.com/png-svg/preview/191182/indian-musical-instrument-tanpura-hand-drawn)
