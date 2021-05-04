@@ -24,9 +24,8 @@ I am an Indian classical music student who has used a wide variety of tanpura ap
 
 ### Week 3: 
 **Code:**
-- [ ] Finalize increase and decrease tanpura speed
-- [ ] Look into changing pitch and/or 
-- [ ] Changing the notes that play in the tanpura and implement that (saPaPasa vs saMaMaSa)
+- [x] Look into changing pitch and/or 
+- [ ] Changing the notes that play in the tanpura and implement that (saPaPasa vs saMaMaSa) (not implementing this b/c would need more sound files)
 
 **Visualizer:** 
 - [ ] Add slider or +/- button to change tanpura speed
