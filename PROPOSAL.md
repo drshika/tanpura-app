@@ -27,7 +27,7 @@ I am an Indian classical music student who has used a wide variety of tanpura ap
 - [ ] Changing the notes that play in the tanpura and implement that (saPaPasa vs saMaMaSa) (not implementing this b/c would need more sound files)
 
 **Visualizer:** 
-- [ ] Add buttons for changing what notes play in the tanpura or what pitch it is. 
+- [x] Add buttons for changing what notes play in the tanpura or what pitch it is. 
 
 4. If you were to finish the project early, what extra "stretch goals" could you implement?
 
