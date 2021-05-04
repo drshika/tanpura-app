@@ -28,6 +28,7 @@ namespace tanpura {
         ci::gl::drawStringCentered(
                 kTitleText, kTitleTextPosition, kTextColor,
                 ci::Font(kTitleFontName, kTitleTextHeight));
+        ci::gl::color(ci::Color("White"));
         cinder::gl::draw(mImage, kImagePosition);
 
         // Draw Pitch Name
