@@ -1,7 +1,7 @@
 #include <iostream>
 #include "core/player.h"
 
-using tanpura::audio::Player;
+using tanpura::Player;
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
