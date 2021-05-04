@@ -1,5 +1,5 @@
 # Tanpura-App
-![Screenshot of _Tanpura_ app](app_screenshot.png)
+![Screenshot of _Tanpura_ app](images/app_screenshot.png)
 # Description
 Tanpura is a string instrument that is plucked to help Indian classical musicians practice. Tanpura-App is my attempt to emulate that experience using Cinder and C++.
 
