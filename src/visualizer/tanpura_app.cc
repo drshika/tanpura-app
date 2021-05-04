@@ -18,9 +18,6 @@ namespace tanpura {
     void TanpuraApp::setup() {
         auto img = loadImage(loadAsset("tanpuraimg.png"));
         mImage = cinder::gl::Texture2d::create(img);
-//        player_ = Player();
-//        player_.SetUpVoices();
-//        current_string_ = player_.GetPitches()[TanpuraString::Pitch::C];
     }
 
     void TanpuraApp::draw() {

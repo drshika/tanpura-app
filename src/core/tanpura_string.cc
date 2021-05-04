@@ -10,6 +10,7 @@ using namespace ci::app;
 namespace tanpura {
 
     TanpuraString::TanpuraString(string source_file_path, TanpuraString::Pitch pitch) {
+        ctx = audio::Context::master();
         audio::SourceFileRef sourceFile = audio::load(app::loadAsset(source_file_path));
         pitch_ = pitch;
 

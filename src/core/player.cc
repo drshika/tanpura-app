@@ -12,7 +12,7 @@ namespace tanpura {
 
     void Player::SetUpVoices() {
         ctx = audio::Context::master();
-
+        
         pitch_files_ = {
                 {"tanpura_A.mp3", TanpuraString::Pitch::A},
                 {"tanpura_Acis.mp3", TanpuraString::Pitch::As},
@@ -28,7 +28,7 @@ namespace tanpura {
                 {"tanpura_Gcis.mp3", TanpuraString::Pitch::Gs}
         };
         
-        for (const auto& x: pitch_files_) {
+        for (auto& x: pitch_files_) {
             TanpuraString str = TanpuraString(x.first, x.second);
             
             pitches_.insert(std::pair<TanpuraString::Pitch, TanpuraString>(x.second, str));
