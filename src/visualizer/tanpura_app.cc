@@ -60,41 +60,50 @@ namespace tanpura {
                 player_.IncrementVolume(current_string_, kIncrementVolume);
                 break;
             case ci::app::KeyEvent::KEY_a:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::A];
+                SwitchPlayingString(TanpuraString::Pitch::A);
                 break;
             case ci::app::KeyEvent::KEY_b:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::B];
+                SwitchPlayingString(TanpuraString::Pitch::B);
                 break;
             case ci::app::KeyEvent::KEY_c:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::C];
+                SwitchPlayingString(TanpuraString::Pitch::C);
                 break;
             case ci::app::KeyEvent::KEY_d:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::D];
+                SwitchPlayingString(TanpuraString::Pitch::D);
                 break;
             case ci::app::KeyEvent::KEY_e:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::E];
+                SwitchPlayingString(TanpuraString::Pitch::E);
                 break;
             case ci::app::KeyEvent::KEY_f:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::F];
+                SwitchPlayingString(TanpuraString::Pitch::F);
                 break;
             case ci::app::KeyEvent::KEY_g:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::G];
+                SwitchPlayingString(TanpuraString::Pitch::G);
                 break;
             case ci::app::KeyEvent::KEY_q:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::As]; //TODO: Add tooltip for sharp notes in UI
+                SwitchPlayingString(TanpuraString::Pitch::As); //TODO: Add tooltip for sharp notes in UI
                 break;
             case ci::app::KeyEvent::KEY_w:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::Cs];
+                SwitchPlayingString(TanpuraString::Pitch::Cs);
                 break;
             case ci::app::KeyEvent::KEY_u:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::Ds];
+                SwitchPlayingString(TanpuraString::Pitch::Ds);
                 break;
             case ci::app::KeyEvent::KEY_r:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::Fs];
+                SwitchPlayingString(TanpuraString::Pitch::Fs);
                 break;
             case ci::app::KeyEvent::KEY_t:
-                current_string_ = player_.GetPitches()[TanpuraString::Pitch::Gs];
+                SwitchPlayingString(TanpuraString::Pitch::Gs);
                 break;
         }
-    };
+    }
+
+    void TanpuraApp::SwitchPlayingString(TanpuraString::Pitch new_pitch) {
+        current_string_.SetIsPlaying(false);
+        player_.Pause(current_string_);
+        
+        current_string_ = player_.GetPitches()[new_pitch];
+        player_.Play(current_string_);
+        current_string_.SetIsPlaying(true);
+    }
 }

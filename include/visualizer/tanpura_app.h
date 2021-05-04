@@ -50,5 +50,11 @@ namespace tanpura {
         
         Player player_;
         TanpuraString current_string_;
+        
+        /**
+         * Helper for switching the playing string.
+         * @param new_string the string you want to switch to.
+         */
+        void SwitchPlayingString(TanpuraString::Pitch new_pitch);
     };
 }
