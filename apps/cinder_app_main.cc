@@ -1,11 +1,15 @@
 #include <iostream>
-#include "core/player.h"
+#include "visualizer/tanpura_app.h"
 
-using tanpura::Player;
+using namespace ci;
+using namespace ci::app;
+using namespace std;
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    Player player = Player();
-    player.Play();
-    return 0;
+using tanpura::TanpuraApp;
+
+void prepareSettings(TanpuraApp::Settings* settings) {
+    settings->setResizable(false);
 }
+
+// This line is a macro that expands into an "int main()" function.
+CINDER_APP(TanpuraApp, ci::app::RendererGl, prepareSettings);
