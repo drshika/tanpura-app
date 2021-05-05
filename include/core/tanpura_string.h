@@ -56,7 +56,7 @@ namespace tanpura {
          * Getter for Pitch Name
          * @return gain_
          */
-        const string &getPitchName() const;
+        const string &GetPitchName() const;
         
         /**
          * Getter for is_playing_
@@ -74,7 +74,7 @@ namespace tanpura {
          * Setter for pitch
          * @return pitch_
          */
-        Pitch getPitch() const;
+        Pitch GetPitch() const;
 
     private:
         Pitch pitch_;

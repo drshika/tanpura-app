@@ -32,7 +32,7 @@ namespace tanpura {
         cinder::gl::draw(mImage, kImagePosition);
 
         // Draw Pitch Name
-        pitch_name = current_string_.getPitchName();
+        pitch_name = current_string_.GetPitchName();
         ci::gl::color(kBoxColor);
         ci::gl::drawSolidRect(kPitchBox);
         ci::gl::color(kBoxOutlineColor);

@@ -10,8 +10,8 @@ TEST_CASE("Constructor") {
 
     SECTION("Default Constructor") {
         REQUIRE_FALSE(string.GetIsPlaying());
-        REQUIRE(string.getPitchName() == "C");
-        REQUIRE(string.getPitch() == TanpuraString::Pitch::C);
+        REQUIRE(string.GetPitchName() == "C");
+        REQUIRE(string.GetPitch() == TanpuraString::Pitch::C);
     }
     
     SECTION("Check the BufferPlayerNode initialization") {
@@ -23,8 +23,8 @@ TEST_CASE("Constructor") {
     }
     
     SECTION("Check pitch name") {
-        REQUIRE(string1.getPitchName() == "A");
-        REQUIRE(string2.getPitchName() == "A#");
+        REQUIRE(string1.GetPitchName() == "A");
+        REQUIRE(string2.GetPitchName() == "A#");
     }
 
     SECTION("Check that is_playing_ is set to false") {

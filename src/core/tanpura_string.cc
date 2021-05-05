@@ -41,7 +41,7 @@ namespace tanpura {
         return gain_;
     }
 
-    const string &TanpuraString::getPitchName() const {
+    const string &TanpuraString::GetPitchName() const {
         return pitch_name_;
     }
 
@@ -59,7 +59,7 @@ namespace tanpura {
         is_playing_ = false;
     }
 
-    TanpuraString::Pitch TanpuraString::getPitch() const {
+    TanpuraString::Pitch TanpuraString::GetPitch() const {
         return pitch_;
     }
 }
