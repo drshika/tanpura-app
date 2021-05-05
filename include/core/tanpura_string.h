@@ -58,10 +58,22 @@ namespace tanpura {
          */
         const string &getPitchName() const;
         
+        /**
+         * Getter for is_playing_
+         * @return is_playing_
+         */
         bool GetIsPlaying() const;
-
+        
+        /**
+         * Setter for is_playing_
+         * @param isPlaying what to set it to
+         */
         void SetIsPlaying(bool isPlaying);
-
+        
+        /**
+         * Setter for pitch
+         * @return pitch_
+         */
         Pitch getPitch() const;
 
     private:

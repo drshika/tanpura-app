@@ -6,8 +6,6 @@ using tanpura::Player;
 using tanpura::TanpuraString;
 using std::map;
 
-using tanpura::TanpuraString;
-
 TEST_CASE("Set Up Voices") {
     Player player = Player();
     player.SetUpVoices();

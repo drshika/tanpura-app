@@ -26,7 +26,11 @@ namespace tanpura {
          * Draws all the components of the app on a window on the computer screen
          */
         void draw() override;
-
+        
+        /**
+         * Performs actions (play/pause/volume) on keypresses
+         * @param event 
+         */
         void keyDown(KeyEvent event) override;
     private:
         //Window and Element positioning
