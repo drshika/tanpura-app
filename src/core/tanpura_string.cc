@@ -14,9 +14,10 @@ namespace tanpura {
         audio::SourceFileRef sourceFile = audio::load(app::loadAsset(source_file_path));
         pitch_ = pitch;
 
-        int pitch_len = source_file_path.substr(8).length();
-        pitch_name_ = source_file_path.substr(8, 1);
-
+        int pitch_len = source_file_path.substr(pitch_name_position).length();
+        pitch_name_ = source_file_path.substr(pitch_name_position, 1);
+        
+        //adds a sharp to the pitch name if it has 'cis' added to it
         if (pitch_len == 8) {
             pitch_name_ += "#";
         }
@@ -56,5 +57,9 @@ namespace tanpura {
         pitch_ = Pitch::C;
         pitch_name_ = "C";
         is_playing_ = false;
+    }
+
+    TanpuraString::Pitch TanpuraString::getPitch() const {
+        return pitch_;
     }
 }

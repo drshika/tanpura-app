@@ -62,8 +62,11 @@ namespace tanpura {
 
         void SetIsPlaying(bool isPlaying);
 
+        Pitch getPitch() const;
+
     private:
         Pitch pitch_;
+        
         string pitch_name_;
 
         audio::BufferPlayerNodeRef mBufferPlayer_;
@@ -71,5 +74,7 @@ namespace tanpura {
         audio::GainNodeRef gain_;   
 
         bool is_playing_;
+        
+        int pitch_name_position = 8;
     };
 }
